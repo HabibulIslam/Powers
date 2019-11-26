@@ -1,0 +1,57 @@
+<!DOCType HTML>
+<html>
+<head>
+<title>Testing JavaScript</title>
+</head>
+<body>
+  <p> Howdy </p>
+  
+  <p>Click the button to take two inputs, and then display <br>the second input as a superscript of the first!</p>
+  
+  <!--A clickable button from problem one-->
+  <button onclick="myFunctionOne()">Try it</button>
+  <!--Where the inputs are output-->
+  <p id="super"></p>
+
+  <script type="text/javascript">
+    //This function is run when the first button is pressed
+    function myFunctionOne() {
+      //Taking inputs
+      var one = window.prompt("First input?");
+      var two = window.prompt("Second input?");
+      
+      //Creating a superscript
+      var result = two.sup();
+      
+      //Combining inputs
+      document.getElementById("super").innerHTML = one + result;
+    }
+  </script>
+  
+  <p>Click the button to take one input, and then display <br>the factorial!</p>
+  
+  <!--A clickable button from problem two-->
+  <button onclick="myFunctionTwo()">Try it</button>
+  <!--Where the inputs are output-->
+  <p id="factorial"></p>
+  
+  <script type="text/javascript">
+    //This function is run when the second button is pressed
+    function myFunctionTwo() {
+      //Taking inputs
+      var number = window.prompt("What number would you like the factorial of?");
+      
+      //Doing the math via while loop
+      var total = 1;
+      while (number > 0) {
+        total = total * number;
+        number--;
+      }
+      
+      //Combining inputs
+      document.getElementById("factorial").innerHTML = total;
+    }
+  </script>
+  
+</body>
+</html>
