@@ -24,7 +24,7 @@
       //Creating a superscript
       var result = two.sup();
       
-      //Combining inputs
+      //Combining inputs and output to p element with id super
       document.getElementById("super").innerHTML = one + result;
       
       //Looping to calculate power
@@ -37,6 +37,7 @@
         two--;
       }
       
+      //Output answer var to p element with id power
       document.getElementById("power").innerHTML = answer;
     }
   </script>
