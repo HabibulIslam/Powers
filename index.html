@@ -1,10 +1,10 @@
 <!DOCType HTML>
 <html>
 <head>
-<title>Heck With Calculators</title>
+<title>Für Christopher</title>
 </head>
 <body>
-  <p>Für Christopher</p>
+  <p>Heck With Calculators</p>
   
   <p>Click the button to take two inputs, and then display <br>the second input as a superscript of the first!</p>
   
@@ -12,6 +12,7 @@
   <button onclick="myFunctionOne()">Try it</button>
   <!--Where the inputs are output-->
   <p id="super"></p>
+  <p id="power"></p>
 
   <script type="text/javascript">
     //This function is run when the first button is pressed
@@ -25,10 +26,22 @@
       
       //Combining inputs
       document.getElementById("super").innerHTML = one + result;
+      
+      //Looping to calculate power
+      var answer = 1;
+      if (two == 0) {
+        answer = 0; 
+      }
+      while (two > 0) {
+        answer = answer * one;
+        two--;
+      }
+      
+      document.getElementById("power").innerHTML = answer;
     }
   </script>
   
-  <p>Click the button to take one input, and then display <br>the factorial!</p>
+  <p>Click the button to enter a whole number, and then display <br>the factorial!</p>
   
   <!--A clickable button from problem two-->
   <button onclick="myFunctionTwo()">Try it</button>
